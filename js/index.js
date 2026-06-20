@@ -130,10 +130,6 @@ function checkFinish() {
 }
 function showFinalModal() {
 
-    window.location.href = "final.html"
-}
-
-function resultModalScrore(){
                 const user = localStorage.getItem("username") || "Пользователь";
 
             modalScore.style.display = "flex";
@@ -161,3 +157,5 @@ function resultModalScrore(){
                     modalScore.style.display = "none";
                 })
 }
+
+
