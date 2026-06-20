@@ -7,7 +7,6 @@
 
 body.dark-theme {
     min-height: 100vh;
-
     display: flex;
 
     justify-content: center;
@@ -27,16 +26,15 @@ body.dark-theme {
 }
 
 .start-page {
-    width: 650px;
+    max-width: 1200px;
 
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
     background: #1f1b33;
-
     padding: 60px;
-
     border-radius: 28px;
-
     border: 2px solid #8b5cf6;
-
     box-shadow:
         0 0 40px rgba(
             139,
@@ -45,7 +43,6 @@ body.dark-theme {
             .35
         );
 
-    text-align: center;
 }
 
 .title-start {
@@ -54,6 +51,15 @@ body.dark-theme {
     color: #d8b4fe;
     line-height: 50px;
     margin-bottom: 20px;
+}
+
+.left-start-page > p {
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 20px;
+    max-width: 450px;
+    font-style: italic;
+    opacity: 0.8;
 }
 
 .inner-title-start {
