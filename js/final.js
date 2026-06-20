@@ -1,18 +1,34 @@
 function showFinalModal() {
-  const element = document.querySelector('#score-content');
+    const element = document.querySelector('#score-content');
 
-  const jsonString = localStorage.getItem('quizResult');
-  const myObject = JSON.parse(jsonString);
-  console.log(myObject)
-  element.innerHTML = `
-    <div class="score-content">
-      <h2>🏁 Квиз завершён</h2>
+    const jsonString = localStorage.getItem('quizResult');
+    const myObject = JSON.parse(jsonString);
 
-      <p><b>${myObject.name}</b></p>
-      <p>Всего вопросов ${myObject.score}</p>
-      <p>✔ Правильных ответов: ${myObject.score - myObject.wrong}</p>
-      <p>❌ Неправильных ответов: ${myObject.wrong}</p>
-    </div>
-  `;
+    element.innerHTML = `
+        <div class="score-content">
+            <h2>🏁 Квиз завершён</h2>
+
+            <p><b>${myObject.name}</b></p>
+            <p>Всего вопросов ${myObject.score}</p>
+            <p>✔ Правильных ответов: ${myObject.score - myObject.wrong}</p>
+            <p>❌ Неправильных ответов: ${myObject.wrong}</p>
+        </div>
+    `;
+
+    fetch("https://viktorina-backend.onrender.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: myObject.name,
+            score: myObject.score,
+            wrong: myObject.wrong
+        })
+    })
+    .then(res => res.json())
+    .then(data => console.log("server response:", data))
+    .catch(err => console.error("fetch error:", err));
 }
+
 showFinalModal()
