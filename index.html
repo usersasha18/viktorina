@@ -1,25 +1,38 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Квиз</title>
+    <link
+        rel="stylesheet"
+        href="css/start.css"
+    >
 </head>
 <body class="dark-theme">
-    <div class="wrapper">
-        <h1 class="title">Викторина</h1>
-        <div id="root">
-            <!-- question -->
-        </div>
-        <form id="answers">
+    <div class="start-page">
+        <h1 class="title">
+            Викторина по интернет угрозам
+        </h1>
+        <p class="subtitle">
+            Введи имя и фамилию перед началом
+        </p>
+        <form class="start-form">
+            <input id="name" type="text" placeholder="Имя" required > 
+            <input id="surname" type="text" placeholder="Фамилия" required >
+            <button
+                type="submit"
+                class="start-btn"
+            >
+                Начать
+            </button>
         </form>
-        <div class="modal-score">
-            <button id="close">Закрыть окно</button>
-        </div>
-        <button id="changeTheme">Ответить</button>
     </div>
-    <script src="js/questions.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/start.js"></script>
 </body>
 </html>
+
