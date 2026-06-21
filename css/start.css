@@ -26,8 +26,8 @@ body.dark-theme {
 }
 
 .start-page {
-    max-width: 1200px;
-
+    min-width: 700px;
+    width: 100%;
     display: flex;
     gap: 1rem;
     justify-content: space-between;

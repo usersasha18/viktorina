@@ -17,7 +17,7 @@ showQuestion();
 function showQuestion() {
     if (answerIndex < data.length) {
         answers.innerHTML = "";
-        root.innerHTML = data[answerIndex]['question'] + "<br>" + data[answerIndex]['text'];
+        root.innerHTML = `${"<span class='root-text'>" + data[answerIndex]['question'] +"</span>" + "<br>" + data[answerIndex]['text']}`;
         for (const [index, value] of data[answerIndex]["answers"].entries()) {
             answers.innerHTML += `
             <label class="answer-tile">
