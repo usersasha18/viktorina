@@ -10,8 +10,8 @@ function showFinalModal() {
 
             <p><b>${myObject.name}</b></p>
             <p>Всего вопросов ${myObject.score}</p>
-            <p>✔ Правильных ответов: ${myObject.score - myObject.wrong}</p>
-            <p>❌ Неправильных ответов: ${myObject.wrong}</p>
+            <p><b>Правильных ответов:</b> ${myObject.score - myObject.wrong}</p>
+            <p><b>Неправильных ответов:</b> ${myObject.wrong}</p>
         </div>
     `;
 

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+body.dark-theme {
+    min-height: 100vh;
+
+    padding: 24px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #141420,
+            #1b1033
+        );
+
+    color: white;
+}
+
+/* Главная карточка */
+ul {
+    list-style: none;
+}
+.start-page {
+    width: 100%;
+
+    max-width: 760px;
+
+    background: #1f1b33;
+
+    border: 2px solid #8b5cf6;
+
+    border-radius: 28px;
+
+    padding: 48px;
+
+    box-shadow:
+        0 0 40px rgba(139, 92, 246, .25);
+
+    text-align: center;
+}
+
+/* Заголовок */
+
+.title {
+    color: #d8b4fe;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+    line-height: 1.15;
+}
+
+.start-page h2 {
+    color: #d4d4ff;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    margin-bottom: 34px;
+}
+
+/* Блок навыков */
+
+.start-page p {
+    background: rgba(139, 92, 246, .08);
+
+    border: 1px solid rgba(216, 180, 254, .2);
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    line-height: 2;
+
+    font-size: 18px;
+
+    color: #ece8ff;
+}
+
+.start-page h3 {
+    color: #d8b4fe;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+/* Результаты */
+
+#score-content {
+    margin-top: 34px;
+}
+
+/* Карточка результатов */
+
+.score-content {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(139, 92, 246, .12),
+            rgba(139, 92, 246, .05)
+        );
+
+    border: 1px solid rgba(216, 180, 254, .25);
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    text-align: left;
+}
+
+.score-content h2 {
+    text-align: center;
+
+    color: #d8b4fe;
+
+    margin-bottom: 24px;
+
+    font-size: 28px;
+}
+
+.score-content p {
+    background: none;
+
+    border: none;
+
+    padding: 0;
+
+    margin-bottom: 14px;
+
+    line-height: 1.6;
+
+    font-size: 18px;
+}
+
+/* ====================== */
+/* Планшеты */
+/* ====================== */
+
+@media (max-width: 768px) {
+
+    body.dark-theme {
+        padding: 18px;
+
+        align-items: flex-start;
+    }
+
+    .start-page {
+        padding: 32px 24px;
+
+        border-radius: 22px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .start-page h2 {
+        font-size: 20px;
+
+        margin-bottom: 26px;
+    }
+
+    .start-page h3 {
+        font-size: 20px;
+    }
+
+    .start-page p {
+        font-size: 17px;
+
+        padding: 22px;
+
+        line-height: 1.8;
+    }
+
+    .score-content {
+        padding: 22px;
+    }
+
+    .score-content h2 {
+        font-size: 24px;
+    }
+
+}
+
+/* ====================== */
+/* iPhone */
+/* ====================== */
+
+@media (max-width: 430px) {
+
+    /* последний блок с текстом (наша цель — плотность) */
+    .start-page h2,
+    .start-page h3 {
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+
+    .start-page p {
+        margin-top: 6px;
+        margin-bottom: 8px;
+        line-height: 1.3;
+        padding: 10px;
+    }
+
+    .skills {
+        margin-top: 10px;
+    }
+
+    .skills h3 {
+        margin-bottom: 6px;
+    }
+
+    .skills ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .skills li {
+        margin-bottom: 4px;
+        line-height: 1.25;
+    }
+
+}
