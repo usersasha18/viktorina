@@ -2,6 +2,7 @@ const toggleButton = document.querySelector('#changeTheme');
 const root = document.querySelector('#root');
 const answers = document.querySelector('#answers');
 const modalScore = document.querySelector(".modal-score");
+const modalOverlay = document.querySelector('.modal-overlay');
 
 let score = 0;
 let answerIndex = 0;
@@ -81,26 +82,30 @@ function checkAnswer() {
 
 function showRetryModal() {
     modalScore.style.display = "flex";
-
+    modalOverlay.classList.add('active');
+    modalScore.classList.add('active');
     modalScore.innerHTML = `
         <div class="modal-content">
-            <h2>❌Осторожно</h2>
-            <p>Подумай ещё:
-                <ul>
-                  <li>кто отправитель?</li>
-                  <li>просят ли пароль?</li>
-                  <li>есть ли давление или срочность?</li>
-                  <li>можно ли проверить информацию?</li>
-                </ul>
-            </p>
-            <button id="close">Вернуться к вопросу.</button>
-        </div>
-    `;
+            <h2 class="modal-text-title">❌Осторожно</h2>
+                <p> <span class="sub-text-modal">Подумай ещё:</span>
+                    <ul class="modal-list">
+                        <li>кто отправитель?</li>
+                        <li>просят ли пароль?</li>
+                        <li>есть ли давление или срочность?</li>
+                        <li>можно ли проверить информацию?</li>
+                    </ul>
+                </p>
+                <button id="close">Вернуться к вопросу.</button>
+            </div>
+        `
+    ;
 
     document
         .querySelector('#close')
         .addEventListener('click', () => {
             modalScore.style.display = "none";
+            modalOverlay.classList.remove('active');
+            modalScore.classList.remove('active');
         });
 }
 
